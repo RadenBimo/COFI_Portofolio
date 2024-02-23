@@ -21,7 +21,7 @@ IMAGES = {
     "Linkedin": "./images/Link.png",
     "WhatsApp": "./images/Whatsapp.png",
     "Gmail": "./images/gmail.png",
-    "Ig": "./images/Ig.png"
+    "Ig": "./images/ig.png"
     ""
 }
 

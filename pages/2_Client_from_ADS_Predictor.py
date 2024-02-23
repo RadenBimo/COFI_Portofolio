@@ -5,7 +5,7 @@ from constants import IMAGES
 from PIL import Image
 import pandas as pd
 
-df = pd.read_csv(".\Modeling\data\Social_Network_Ads.csv")
+#df = pd.read_csv(".\Modeling\data\Social_Network_Ads.csv")
 
 st.set_page_config(
     page_title="Regression Model",
@@ -52,7 +52,10 @@ st.header("About Model")
 st.subheader("Model Usage")
 st.write("This predictive model can be integrated into advertising platforms to optimize ad targeting and budget allocation. By accurately predicting which users are more likely to make a purchase, advertisers can tailor their campaigns to focus on high-potential customers, thereby improving the overall return on investment (ROI) of their advertising efforts.")
 
-st.subheader("Exploratory Data Analysis")
+"""st.subheader("Exploratory Data Analysis")
 st.scatter_chart(df,x='Age',y='EstimatedSalary',color='Purchased')
-st.bar_chart(df.groupby(["Purchased","Gender"]).count().reset_index().pivot(index='Gender', columns='Purchased')['Age'])
-st.write()
+st.bar_chart(df.groupby(["Purchased","Gender"])
+            .count()
+            .reset_index()
+            .pivot(index='Gender', columns='Purchased')['Age'])
+st.write()"""

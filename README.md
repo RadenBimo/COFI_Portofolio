@@ -64,24 +64,26 @@ Streamlit is used for the frontend, providing an interactive and user-friendly i
 #### 1. Start the FastAPI backend server.
 
 1.1 Create new spaces on hugging face FastAPI backend server.
-![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_01.png)
+![new space](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_01.png)
 
 1.2 Choose Docker spaces SDK with blank template.
-![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_02.png)
+![create space](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_02.png)
 
 1.3 Git Push or upload COFI_Portofolio to your space repository. Hugging Face automatically build your App.
 
 1.4 Open your HF App and click the "⋮" simbol on your app. then click the embed this space option.
-![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_03.png)
+![search domain](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_03.png)
 
 1.5 Look the bottom at the box, this will become your domain to your Rest API.
-![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_04.png)
+![API url](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_04.png)
 
+#### 2. Start the Streamlit frontend App.
 
+2.1 Create new App on `https://streamlit.io/`.
+![crate new app](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/st_01.png)
 
-
-
-#### 2. Start  backend server.
+2.2 Fill with path to your repo and main.py file.
+![deploy the app ](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/st_02.png)
 
 
 

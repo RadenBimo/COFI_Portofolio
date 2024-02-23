@@ -5,7 +5,7 @@ from constants import IMAGES
 from PIL import Image
 import pandas as pd
 
-#df = pd.read_csv(".\Modeling\data\Social_Network_Ads.csv")
+df = pd.read_csv("./Modeling/data/Social_Network_Ads.csv")
 
 st.set_page_config(
     page_title="Regression Model",

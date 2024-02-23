@@ -54,10 +54,10 @@ st.write("This predictive model can be integrated into advertising platforms to 
 import os
 st.write(os.getcwd())
 
-"""st.subheader("Exploratory Data Analysis")
+st.subheader("Exploratory Data Analysis")
 st.scatter_chart(df,x='Age',y='EstimatedSalary',color='Purchased')
 st.bar_chart(df.groupby(["Purchased","Gender"])
             .count()
             .reset_index()
             .pivot(index='Gender', columns='Purchased')['Age'])
-st.write()"""
+st.write()

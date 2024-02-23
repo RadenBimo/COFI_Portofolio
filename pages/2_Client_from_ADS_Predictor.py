@@ -51,6 +51,8 @@ st.header("About Model")
 
 st.subheader("Model Usage")
 st.write("This predictive model can be integrated into advertising platforms to optimize ad targeting and budget allocation. By accurately predicting which users are more likely to make a purchase, advertisers can tailor their campaigns to focus on high-potential customers, thereby improving the overall return on investment (ROI) of their advertising efforts.")
+import os
+st.write(os.getcwd())
 
 """st.subheader("Exploratory Data Analysis")
 st.scatter_chart(df,x='Age',y='EstimatedSalary',color='Purchased')

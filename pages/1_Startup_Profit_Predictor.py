@@ -1,6 +1,7 @@
 import streamlit as st
-import requests
 from src.data_structure import *
+from src.util import *
+from constants import IMAGES
 from PIL import Image
 
 st.set_page_config(

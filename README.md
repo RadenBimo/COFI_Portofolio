@@ -37,7 +37,7 @@ Streamlit is used for the frontend, providing an interactive and user-friendly i
 
 2. Navigate to the project directory.
     ```bash
-    cd portfolio-project
+    cd COFI_Portofolio
     ```
 
 3. Install dependencies.
@@ -58,6 +58,30 @@ Streamlit is used for the frontend, providing an interactive and user-friendly i
     ```
 
 3. Open your web browser and go to `http://localhost:8501` to access the application and you can see the documentation API on `http://localhost:8000/docs`.
+
+### Running the Application Online
+
+#### 1. Start the FastAPI backend server.
+
+1.1 Create new spaces on hugging face FastAPI backend server.
+![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_01.png)
+
+1.2 Choose Docker spaces SDK with blank template.
+![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_02.png)
+
+1.3 Git Push or upload COFI_Portofolio to your space repository. Hugging Face automatically build your App.
+
+1.4 Open your HF App and click the "⋮" simbol on your app. then click the embed this space option.
+![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_03.png)
+
+1.5 Look the bottom at the box, this will become your domain to your Rest API.
+![alt text](https://github.com/RadenBimo/COFI_Portofolio/blob/main/images/hf_04.png)
+
+
+
+
+
+#### 2. Start  backend server.
 
 
 

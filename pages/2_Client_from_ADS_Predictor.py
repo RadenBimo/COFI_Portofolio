@@ -43,6 +43,7 @@ with st.container(height= 300):
                 st.markdown(data["purchased"])
             except:
                 st.write("Wrong input format. Please check your input")
+                st.write(ads_data.dict())
         else:
             st.write("Please fill in the blank space")
 

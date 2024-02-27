@@ -42,7 +42,7 @@ async def predict(data: StartupsIn):
 
 
 @app.post("/ads/predict", response_model=AdsOut)
-def predict(data: AdsIn):
+async def predict(data: AdsIn):
     """
     returns prediction whether users have purchased a product by clicking on the advertisements shown to them.
 
@@ -52,13 +52,13 @@ def predict(data: AdsIn):
     - **estimatedSalary** (float): Estimation of User Salary
 
     Returns:
-    - **Purchased** (dict[string, float]): A dictionary containing prediction.
+    - **Purchased** (dict[string, str]): A dictionary containing prediction.
     """
     gender = data.gender
     age = data.age
     estimatedSalary = data.estimatedSalary
 
-    purchased = predict_ads(gender, age, estimatedSalary)
+    purchased = await predict_ads(gender, age, estimatedSalary)
     return {"purchased": purchased}
 
 

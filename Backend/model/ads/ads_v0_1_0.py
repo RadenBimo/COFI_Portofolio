@@ -18,7 +18,7 @@ classes = [
 
 async def predict_pipeline(
     gender: str,
-    age: float,
+    age: int,
     estimatedSalary: float
 ) -> str:
     pred = model.predict([[gender, age, estimatedSalary]])

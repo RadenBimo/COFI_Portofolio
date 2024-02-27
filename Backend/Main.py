@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from util.data_structure import *
+from src.data_structure import *
 from Backend.model.startups.startups_v0_1_0 import __version__ as startups_model_ver
 from Backend.model.startups.startups_v0_1_0 import predict_pipeline as predict_startups
 from Backend.model.ads.ads_v0_1_0 import __version__ as ads_model_ver
@@ -52,7 +52,7 @@ def predict(data: AdsIn):
     - **estimatedSalary** (float): Estimation of User Salary
 
     Returns:
-    - **Purchased** (dict[string,int]): A dictionary containing prediction.
+    - **Purchased** (dict[string, float]): A dictionary containing prediction.
     """
     gender = data.gender
     age = data.age

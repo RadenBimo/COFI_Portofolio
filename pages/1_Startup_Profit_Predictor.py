@@ -36,6 +36,5 @@ with st.container():
 if st.button('Predict'):
     if rd and administration and marketing and state:
         ads_data = StartupsIn(rd=rd, administration=administration, marketing=marketing,state=state)
-        st.write(ads_data)
         data = send_data_to_api("https://radenbimo-portofoliotest.hf.space/startups/predict", ads_data.dict())
         st.write(data["profit"])

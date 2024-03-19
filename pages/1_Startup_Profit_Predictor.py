@@ -31,10 +31,12 @@ with st.container():
     with col3:
         marketing = st.text_input('Marketing Spend:')
     with col4:
-        state = st.text_input('State Spend:')
+        state = st.text_input('State:')
         
 if st.button('Predict'):
     if rd and administration and marketing and state:
         ads_data = StartupsIn(rd=rd, administration=administration, marketing=marketing,state=state)
-        data = send_data_to_api("https://radenbimo-portofoliotest.hf.space/startups/predict", ads_data.dict())
-        st.write(str(data["profit"]))
+        with st.spinner(text='In progress'):
+            data = send_data_to_api("https://radenbimo-portofoliotest.hf.space/startups/predict", ads_data.dict())
+            st.success(str(data["profit"]))
+

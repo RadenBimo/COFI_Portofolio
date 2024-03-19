@@ -12,7 +12,7 @@ ig_pic = Image.open(IMAGES["Ig"])
 
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="My  Profile",
 )
 
 #---BIO SECTION---
@@ -22,8 +22,6 @@ st.write(INFO["About"])
 
 # --- PROFILE SECTION ---
 st.header("Activity")
-
-
 
 col1, col2 = st.columns([4,7], gap="small")
 col3, col4 = st.columns([7,4], gap="small")

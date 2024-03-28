@@ -276,11 +276,13 @@ with chart_tab:
     st.header("Charts")
     st.divider()
     
+    
     chart_data = pd.DataFrame({
         "col1":[1,3,5,4,5],
         "col2": range(1,6),
         "col3": ["A"] * 2 + ["B"] * 3 
     })
+
 
     chart_data_sum = chart_data.groupby("col3").count().reset_index()
 
@@ -291,6 +293,7 @@ with chart_tab:
     )
 
     st.dataframe(chart_data)
+
     st.subheader("Area Chart")
     st.code("""
         st.area_chart(data=None, *, x=None, y=None, color=None,
@@ -332,11 +335,16 @@ with chart_tab:
     st.divider()
 
 with load_tab:
-
     st.subheader("Status Elements")
     st.code("""
-        st.map(data=None, *, latitude=None, longitude=None, color=None,
-            size=None, zoom=None, use_container_width=True)
+        st.spinner(text="In progress...")
+        
+        # Using 'with' notation
+        with st.spinner(text='In progress'):
+            #ex
+            time.sleep(5)
+            st.success('Done')
+        
     """)
     if st.button("Spinner"):
         with st.spinner(text='In progress'):
@@ -345,10 +353,31 @@ with load_tab:
     
     st.subheader("Progress Bar")
     st.code("""
-        st.map(data=None, *, latitude=None, longitude=None, color=None,
-            size=None, zoom=None, use_container_width=True)
+        bar = st.progress(value, text=None)
+        # Update progress
+        bar.proress(value)
     """)
     if st.button("st.progress"):
         bar = st.progress(10)
         time.sleep(3)
         bar.progress(100)
+
+    st.subheader("Status Bar")
+    st.code("""
+        st.status(label, *, expanded=False, state="running")
+
+        # Using 'with' notation
+        with st.spinner(text='In progress'):
+            #ex
+            st.write("Searching for data...")
+            time.sleep(2)
+
+    """)
+    if st.button("st.status"):
+        with st.status("Downloading data...",expanded=True):
+            st.write("Searching for data...")
+            time.sleep(2)
+            st.write("Found URL.")
+            time.sleep(1)
+            st.write("Downloading data...")
+            time.sleep(1)

@@ -4,6 +4,7 @@ from src.data_structure import *
 from constants import IMAGES, ACTIVITY, CONTACTS, INFO
 from PIL import Image
 
+
 cofi_pic = Image.open(IMAGES["Cofi"])
 wa_pic = Image.open(IMAGES["WhatsApp"])
 linkedin_pic = Image.open(IMAGES["Linkedin"])
@@ -43,8 +44,3 @@ for i ,(key, val) in enumerate(ACTIVITY.items()):
         with col4:
             st.empty()   
             st.image(pic)
-
-    
-
-
-

@@ -23,7 +23,6 @@ adjust_image(Image.open(ADS_ASSET["Image"]["logo"]))
 with st.container(height= 300):
     # Input
     col1, col2 = st.columns(2)
-
     with col1:
         age = st.text_input('Age:')
         estimatedSalary = st.text_input('Estimated Salary:')
@@ -83,8 +82,6 @@ with eda_tab:
 
     if st.button("**Insight**",key="bar_pie_chart"):
         st.markdown(ADS_PLOT["Gender_influence"]["desc"])
-
-    st.write()
 
 with method_tab:
     st.subheader("Methodology")

@@ -2,6 +2,8 @@ from src.plot import *
 
 ads_plot= AdsPlot()
 
+STARTUP_STATE_CLASS = ["New York", "California", "Florida"]
+
 INFO = { 
    "Name": "COFI",
    "Full_Name": "Coding for Indonesia",
@@ -21,14 +23,12 @@ CONTACTS = {
 }
 
 IMAGES = {
-    "Ads": "./images/ads.jpg",
     "Cofi": "./images/COFI.png",
     "Git": "./images/Git.png",
     "Linkedin": "./images/Link.png",
     "WhatsApp": "./images/Whatsapp.png",
     "Gmail": "./images/gmail.png",
-    "Ig": "./images/ig.png",
-    "Methodology": "./images/ads_methodology.png"
+    "Ig": "./images/ig.png"
 }
 
 ACTIVITY = {
@@ -114,10 +114,20 @@ ADS_PLOT = {
     },
 }
 
-ADS_DESC={
+ADS_ASSET={
+    "Image":{
+        "logo" : "./images/ads.jpg",
+        "methodology": "./images/ads_methodology.png"
+    },
     "Model_usage": """
         This predictive model can be integrated into advertising platforms to optimize ad targeting and budget allocation. 
         By accurately predicting which users are more likely to make a purchase, advertisers can tailor their campaigns to focus on high-potential 
         customers, thereby improving the overall return on investment (ROI) of their advertising efforts.
     """
+}
+
+STARTUP_ASSET={
+    "Image":{
+        "logo" : "./images/profit.png",
+    }
 }

@@ -9,7 +9,7 @@ def send_data_to_api(url: str, data: dict)-> dict :
     else:
         return None
 
-def adjust_image(pic: Image, formation: list =[1,3,1]) -> None:
+def adjust_image(pic: Image, formation: list=[1,3,1]) -> None:
     col1,col2,col3 = st.columns(formation)
     with col1:
         st.write("")

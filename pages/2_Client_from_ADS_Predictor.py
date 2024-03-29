@@ -2,7 +2,7 @@ import streamlit as st
 from src.data_structure import *
 from src.util import *
 from src.plot import *
-from constants import IMAGES,ADS_PLOT,ADS_DESC
+from constants import IMAGES,ADS_PLOT,ADS_ASSET
 from PIL import Image
 import os
 from dotenv import load_dotenv
@@ -17,9 +17,7 @@ st.set_page_config(
 )
 
 st.title("Client from ADS Predictor")
-pic = Image.open(IMAGES["Ads"])
-adjust_image(pic)
-
+adjust_image(Image.open(ADS_ASSET["Image"]["logo"]))
 
 #------------Model_Prediction------------
 with st.container(height= 300):
@@ -39,14 +37,13 @@ with st.container(height= 300):
 
     # Model_Prediction
     if st.button('Predict'):
-        if age and estimatedSalary and gender:
+        if all([age, estimatedSalary, gender]):
             try:
                 ads_data = AdsIn(gender=gender, age=age, estimatedSalary=estimatedSalary)
                 data = send_data_to_api(f"{api_key}/ads/predict", ads_data.dict())
                 st.markdown(data["purchased"])
             except:
                 st.write("Wrong input format. Please check your input")
-                st.write(ads_data.dict())
         else:
             st.write("Please fill in the blank space")
 
@@ -58,7 +55,7 @@ with mu_tab:
     st.subheader("Model Usage")
     st.divider()
 
-    st.write(ADS_DESC["Model_usage"])
+    st.write(ADS_ASSET["Model_usage"])
 
 with eda_tab:
     st.subheader("Exploratory Data Analysis")
@@ -93,6 +90,6 @@ with method_tab:
     st.subheader("Methodology")
     st.divider()
 
-    flow_chart = Image.open(IMAGES["Methodology"])
+    flow_chart = Image.open(ADS_ASSET["Image"]["methodology"])
     adjust_image(flow_chart)
     

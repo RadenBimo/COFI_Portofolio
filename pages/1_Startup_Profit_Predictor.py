@@ -3,6 +3,7 @@ from src.data_structure import *
 from src.util import *
 from constants import IMAGES, STARTUP_STATE_CLASS,STARTUP_ASSET
 from PIL import Image
+import os
 from dotenv import load_dotenv
 
 load_dotenv()

@@ -10,7 +10,7 @@ load_dotenv()
 api_key = os.environ['API_KEY']
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="Regression Model",
 )
 
 st.title("Start Up Company Profit Predictor")

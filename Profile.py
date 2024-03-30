@@ -6,10 +6,10 @@ from PIL import Image
 
 
 cofi_pic = Image.open(IMAGES["Cofi"])
-wa_pic = Image.open(IMAGES["WhatsApp"])
-linkedin_pic = Image.open(IMAGES["Linkedin"])
-git_pic = Image.open(IMAGES["Git"])
-ig_pic = Image.open(IMAGES["Ig"])
+#wa_pic = Image.open(IMAGES["WhatsApp"])
+#linkedin_pic = Image.open(IMAGES["Linkedin"])
+#git_pic = Image.open(IMAGES["Git"])
+#ig_pic = Image.open(IMAGES["Ig"])
 
 
 st.set_page_config(
@@ -17,9 +17,17 @@ st.set_page_config(
 )
 
 #---BIO SECTION---
-st.image(cofi_pic, width=150)
+st.image(Image.open(IMAGES["Cofi"]), width=150)
 st.title("Coding for Indonesia")
+with open("images/Streamlit with Python.pdf", "rb") as file:
+    btn = st.download_button(
+            label="📄 Download Profile",
+            data=file,
+            file_name="Streamlit with Python.pdf",
+            mime="text/plain"
+        )
 st.write(INFO["About"])
+
 
 # --- PROFILE SECTION ---
 st.header("Activity")

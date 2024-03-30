@@ -13,7 +13,7 @@ api_key = os.environ['API_KEY']
 df = pd.read_csv("./Modeling/data/Social_Network_Ads.csv")
 
 st.set_page_config(
-    page_title="Regression Model",
+    page_title="Classification Model",
 )
 
 st.title("Client from ADS Predictor")
